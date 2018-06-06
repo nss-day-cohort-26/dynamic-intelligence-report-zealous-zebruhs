@@ -29,7 +29,11 @@ const newsfeed = {
 
 const populateNews = function (myNewsfeed) {
 //this clears the html in that section
-    document.querySelector("article").innerhtml = " ";
+
+    document.querySelector("#art").innerhtml = " ";
+
+   
+
 //putting that object in a fragment so that I can then push that to DOM
     const newsFragment = document.createDocumentFragment();
 //now making a for in loop to go through 
@@ -63,6 +67,6 @@ const populateNews = function (myNewsfeed) {
     document.querySelector("article").appendChild(newsFragment);
 }
 //now im calling the function and putting the newsfeed into it
-populateNews(newsfeed);
+
 
 //YAY IT WORKS

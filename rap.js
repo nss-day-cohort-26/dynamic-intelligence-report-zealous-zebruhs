@@ -101,5 +101,3 @@ const populateRapSheet= function(myObj){
 
     article.appendChild(fragment);
 }
-
-populateRapSheet(rapSheetObj);
