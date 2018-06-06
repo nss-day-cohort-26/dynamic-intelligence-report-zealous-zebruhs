@@ -20,35 +20,37 @@ const execSummary = {
     }
 
 }
-const summaryFragment = document.createDocumentFragment();
+
 
 function loadSummary() {
-for (key in execSummary) {
+    const summaryFragment = document.createDocumentFragment();
+    for (key in execSummary) {
 
 
-    if (execSummary[key].sectionTitle != null) {
+        if (execSummary[key].sectionTitle != null) {
 
-        let hOne = document.createElement("h1");
-        hOne.textContent = execSummary[key].sectionTitle;
-        summaryFragment.appendChild(hOne);
+            let hOne = document.createElement("h1");
+            hOne.textContent = execSummary[key].sectionTitle;
+            summaryFragment.appendChild(hOne);
+        }
+
+        if (execSummary[key].src != null) {
+
+            let image = document.createElement("img");
+            image.src = execSummary[key].src
+            console.log(image)
+            summaryFragment.appendChild(image);
+        }
+        if (execSummary[key].pTag != null) {
+            let para = document.createElement("p");
+            para.textContent = execSummary[key].pTag;
+            console.log("stuff");
+            summaryFragment.appendChild(para);
+        }
+
     }
-
-    if (execSummary[key].src != null) {
-
-        let image = document.createElement("img");
-        image.src = execSummary[key].src
-        console.log(image)
-        summaryFragment.appendChild(image);
-    }
-    if (execSummary[key].pTag != null) {
-        let para = document.createElement("p");
-        para.textContent = execSummary[key].pTag;
-        console.log("stuff");
-        summaryFragment.appendChild(para);
-    }
-
+    document.querySelector("#art").appendChild(summaryFragment)
 }
-}
 
 
 
@@ -58,4 +60,3 @@ for (key in execSummary) {
 
 
 
-document.querySelector("#art").appendChild(summaryFragment)
