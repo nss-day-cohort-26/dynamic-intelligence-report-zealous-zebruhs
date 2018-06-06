@@ -1,58 +1,48 @@
-const financialPage = {
-    Bank_Accounts: {
-        title: "Bank Accounts",
-        accts: ["Table Credit Union", "Mesa Rojo Bank and Trust"]
-    },
-    businesses: {
-        title: "Businesses",
-        busi: ["A1B Car Wash", "Red Matter Technologies", "Paul Baddude & Associates"],
-    }, 
-    blackmail: {
-        title: "People Walter Off-White has blackmailed",
-        blackmailed: ["Frank Schrager", "Fred Beneke"]
-    },
-    laundering: {
-        title: "Money Laundering Locations",
-        laundery: ["A1B Car Wash", "SaveWalterOffWhite.com", "Los Gatos Hermanos"]
+let financialPageFunc = () => {
+    const financialPage = {
+        bank_Accounts: {
+            title: "Bank Accounts",
+            val: ["Table Credit Union", "Mesa Rojo Bank and Trust"]
+        },
+        businesses: {
+            title: "Businesses",
+            val: ["A1B Car Wash", "Red Matter Technologies", "Paul Baddude & Associates"],
+        },
+        blackmail: {
+            title: "People Walter Off-White has blackmailed",
+            val: ["Frank Schrager", "Fred Beneke"]
+        },
+        laundering: {
+            title: "Money Laundering Locations",
+            val: ["A1B Car Wash", "SaveWalterOffWhite.com", "Los Gatos Hermanos"]
+        }
+    };
+
+    const fragment = document.createDocumentFragment(); //create a document fragment so there is only one write event to the DOM
+
+    let article = document.querySelector("#art")
+
+    for (key in financialPage) {
+        let object = financialPage[key];
+        let valLength = object.val
+        let section = document.createElement("section");
+        let title = document.createElement("h2");
+        let ul = document.createElement("ul")
+
+        title.textContent = `${object.title}: `
+        section.appendChild(title)
+
+        for (i = 0; i < valLength.length; i++) {
+            let lis = document.createElement("li");
+            lis.textContent = `${object.val[i]}`;
+            ul.appendChild(lis);
+        }
+
+        section.appendChild(ul);
+
+        article.appendChild(section);
     }
-};
-
-const fragment = document.createDocumentFragment(); //create a document fragment so there is only one write event to the DOM
-
-let article = document.querySelector("#art")
-
-const mkSec = () => {
-    return document.createElement("section")
 }
-
-//function for making a Li element
-const mkLi = () => {
-    return document.createElement('li');
-}
-
-//function for making a Li element
-const mkUl = () => {
-    return document.createElement('ul');
-}
-
-for (key in financialPage) {
-    let array = financialPage[key];
-    let section = document.createElement("section");
-    let title = document.createElement("h2");
-    title.textContent = `${key}: `
-    section.appendChild(title)
-    section.appendChild(mkUl());
-
-    for (i = 0; i < array.length; i++) {
-        let sec = mkLi();
-        sec.textContent = array[i];
-        section.appendChild(sec)
-    }
-
-
-    article.appendChild(section);
-}
-
 
 
 
