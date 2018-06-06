@@ -1,3 +1,5 @@
+
+//function that creates the financial page
 let financialPageFunc = () => {
     const financialPage = {
         bank_Accounts: {
@@ -22,15 +24,16 @@ let financialPageFunc = () => {
 
     let article = document.querySelector("#art")
 
+    article.innerHTML = ""
+
     for (key in financialPage) {
         let object = financialPage[key];
-        let valLength = object.val
-        let section = document.createElement("section");
+        let valLength = object.val;
         let title = document.createElement("h2");
-        let ul = document.createElement("ul")
+        let ul = document.createElement("ul");
 
-        title.textContent = `${object.title}: `
-        section.appendChild(title)
+        title.textContent = `${object.title}: `;
+        fragment.appendChild(title);
 
         for (i = 0; i < valLength.length; i++) {
             let lis = document.createElement("li");
@@ -38,9 +41,9 @@ let financialPageFunc = () => {
             ul.appendChild(lis);
         }
 
-        section.appendChild(ul);
+        fragment.appendChild(ul);
 
-        article.appendChild(section);
+        article.appendChild(fragment);
     }
 }
 
