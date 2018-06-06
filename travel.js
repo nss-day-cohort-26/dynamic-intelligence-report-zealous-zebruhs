@@ -6,9 +6,12 @@ const travelObject = {
   Rental: ["Albuquerque Meth Trailers", "Rented a movie from Redbox"]
 }
 
-const travelFragment = document.createDocumentFragment()
 
 const travelListBuilder = () => {
+  const travelFragment = document.createDocumentFragment()
+  const h1Element = document.createElement("h1")
+  h1Element.textContent = "Travel Report"
+  travelFragment.appendChild(h1Element)
 
   for(let key in travelObject) {
     const sectionElement = document.createElement("section")
