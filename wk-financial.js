@@ -1,11 +1,20 @@
 const financialPage = {
     Bank_Accounts: {
-        title: "Bank Accounts"
+        title: "Bank Accounts",
         accts: ["Table Credit Union", "Mesa Rojo Bank and Trust"]
-    } 
-    Businesses: ["A1B Car Wash", "Red Matter Technologies", "Paul Baddude & Associates"],
-    Blackmail: ["Frank Schrager", "Fred Beneke"],
-    Laundering: ["A1B Car Wash", "SaveWalterOffWhite.com", "Los Gatos Hermanos"]
+    },
+    businesses: {
+        title: "Businesses",
+        busi: ["A1B Car Wash", "Red Matter Technologies", "Paul Baddude & Associates"],
+    }, 
+    blackmail: {
+        title: "People Walter Off-White has blackmailed",
+        blackmailed: ["Frank Schrager", "Fred Beneke"]
+    },
+    laundering: {
+        title: "Money Laundering Locations",
+        laundery: ["A1B Car Wash", "SaveWalterOffWhite.com", "Los Gatos Hermanos"]
+    }
 };
 
 const fragment = document.createDocumentFragment(); //create a document fragment so there is only one write event to the DOM
