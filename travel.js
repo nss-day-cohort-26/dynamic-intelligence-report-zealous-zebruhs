@@ -31,6 +31,3 @@ const travelListBuilder = () => {
     }
   }
 }
-
-
-travelListBuilder()
