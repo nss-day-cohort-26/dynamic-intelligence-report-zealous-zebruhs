@@ -17,21 +17,50 @@ const newsfeed = {
         h3: "Random Car Blown Up in Vacant Parking Lot",
         p: "Police discovered a red sports car up in flames in a vacant parking lot off of Highway 81.",
         h4: "Likelyhood of this being Walter is 6/10."
-    },  
+    },
     section5: {
         h3: "Detective Hank Discovers Meth Lab in Laundry Facility",
         p: "Police recently discovered a large meth lab in a laundry facility. Police have zero leads and are sad this was hidden from them so long.",
         h4: "Likelyhood of this being Walter is 15/10."
-    } 
+    }
 };
-
-//second step is putting that object in a fragment so that I can then push that to DOM
-//make into a function artcile.innerhtml = " "
-const newsElement = document.querySelector("#news");
-const newsFragment = document.createDocumentFragment();
-//this adds the entire news fragment to the #news div I made in the html
-newsElement.appendChild(newsFragment);
 
 //now I want to do some sort of function that uses .createElement that also appends child to the fragment... i think
 
 //for in loop that will go through the large keys (sections) then dive into each section with a second for in loop
+//make into a function 
+
+const populateNews = function (myNewsfeed) {
+    //this clears the html in that section
+    document.querySelector("article").innerhtml = " ";
+    //putting that object in a fragment so that I can then push that to DOM
+    const newsFragment = document.createDocumentFragment();
+    //now making a for in loop to go through 
+    for (const section in myNewsfeed) {
+        if (myNewsfeed[section].h1 != undefined) {
+            let sectionH1 = document.createElement("h1");
+            sectionH1.textContent = myNewsfeed[section].h1;
+            newsFragment.appendChild(sectionH1);
+        }
+        if (myNewsfeed[section].h3 != undefined) {
+            let sectionMain = document.createElement("section");
+
+            let sectionH3 = document.createElement("h3");
+            sectionH3.textContent = myNewsfeed[section].h3;
+            sectionMain.appendChild(sectionH3);
+
+            let sectionP = document.createElement("p");
+            sectionP.textContent = myNewsfeed[section].p;
+            sectionMain.appendChild(sectionP);
+
+            let sectionH4 = document.createElement("h4");
+            sectionH4.textContent = myNewsfeed[section].h4;
+            sectionMain.appendChild(sectionH4);
+
+            newsFragment.appendChild(sectionMain);
+        }
+    }
+    document.querySelector("article").appendChild(newsFragment);
+}
+
+populateNews(newsfeed);
