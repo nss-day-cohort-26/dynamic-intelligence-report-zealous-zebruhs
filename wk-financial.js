@@ -1,5 +1,8 @@
 const financialPage = {
-    Bank_Accounts: ["Table Credit Union", "Mesa Rojo Bank and Trust"],
+    Bank_Accounts: {
+        title: "Bank Accounts"
+        accts: ["Table Credit Union", "Mesa Rojo Bank and Trust"]
+    } 
     Businesses: ["A1B Car Wash", "Red Matter Technologies", "Paul Baddude & Associates"],
     Blackmail: ["Frank Schrager", "Fred Beneke"],
     Laundering: ["A1B Car Wash", "SaveWalterOffWhite.com", "Los Gatos Hermanos"]
@@ -28,16 +31,17 @@ for (key in financialPage) {
     let section = document.createElement("section");
     let title = document.createElement("h2");
     title.textContent = `${key}: `
-    section.appendChild(mkUl);
+    section.appendChild(title)
+    section.appendChild(mkUl());
 
     for (i = 0; i < array.length; i++) {
         let sec = mkLi();
-        sec.textContent = array[i].key;
+        sec.textContent = array[i];
         section.appendChild(sec)
     }
 
-    section.appendChild(title)
-    article.appendChild(section)
+
+    article.appendChild(section);
 }
 
 
