@@ -25,26 +25,25 @@ const newsfeed = {
     }
 };
 
-//now I want to do some sort of function that uses .createElement that also appends child to the fragment... i think
-
-//for in loop that will go through the large keys (sections) then dive into each section with a second for in loop
-//make into a function 
+//make it all into a function that will create the elements, attach the text content, append to the article which then goes into the html
 
 const populateNews = function (myNewsfeed) {
-    //this clears the html in that section
+//this clears the html in that section
     document.querySelector("article").innerhtml = " ";
-    //putting that object in a fragment so that I can then push that to DOM
+//putting that object in a fragment so that I can then push that to DOM
     const newsFragment = document.createDocumentFragment();
-    //now making a for in loop to go through 
+//now making a for in loop to go through 
     for (const section in myNewsfeed) {
+//if statement for the h1 section since it is by itself
         if (myNewsfeed[section].h1 != undefined) {
             let sectionH1 = document.createElement("h1");
             sectionH1.textContent = myNewsfeed[section].h1;
             newsFragment.appendChild(sectionH1);
         }
+//if statement for the sections that have the h3 in it 
         if (myNewsfeed[section].h3 != undefined) {
             let sectionMain = document.createElement("section");
-
+//these are basicall just creating the elements and then attaching the text and appending to the sectionMain 
             let sectionH3 = document.createElement("h3");
             sectionH3.textContent = myNewsfeed[section].h3;
             sectionMain.appendChild(sectionH3);
@@ -56,11 +55,14 @@ const populateNews = function (myNewsfeed) {
             let sectionH4 = document.createElement("h4");
             sectionH4.textContent = myNewsfeed[section].h4;
             sectionMain.appendChild(sectionH4);
-
+//now appending all of those from sectionMain to newsFragment
             newsFragment.appendChild(sectionMain);
         }
     }
+//selecting article to then append the entire news fragment 
     document.querySelector("article").appendChild(newsFragment);
 }
-
+//now im calling the function and putting the newsfeed into it
 populateNews(newsfeed);
+
+//YAY IT WORKS
