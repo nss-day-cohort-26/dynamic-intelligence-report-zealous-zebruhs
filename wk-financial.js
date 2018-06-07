@@ -26,8 +26,12 @@ let financialPageFunc = () => {
     article.innerHTML = ""
 
     let heading = document.createElement("h1")
-    heading.textContent = "Walter Off-White's Financial Interests";
+    heading.textContent = "Wanted: Walter Off-White";
     fragment.appendChild(heading);
+
+    let heading2 = document.createElement("h2")
+    heading2.textContent = "Walter Off-White's Financial Interests";
+    fragment.appendChild(heading2);
 
 
     for (key in financialPage) {
