@@ -16,10 +16,10 @@ var rapSheetObj = {
         sectionTitle: "Prisons",
         p: "Marriage to skyler",
         img: {
-            src: "",
-            alt: "",
-            width: "",
-            height: ""
+            src: "skyler.jpg",
+            alt: "Skyler White",
+            width: "202.5px",
+            height: "270px"
         }
     },
     section3: {
@@ -100,4 +100,5 @@ const populateRapSheet= function(myObj){
 
 
     article.appendChild(fragment);
+    navbarToggle("rap");
 }
