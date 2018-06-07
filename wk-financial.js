@@ -25,6 +25,11 @@ let financialPageFunc = () => {
 
     article.innerHTML = ""
 
+    let heading = document.createElement("h1")
+    heading.textContent = "Walter Off-White's Financial Interests";
+    fragment.appendChild(heading);
+
+
     for (key in financialPage) {
         let object = financialPage[key];
         let valLength = object.val;
