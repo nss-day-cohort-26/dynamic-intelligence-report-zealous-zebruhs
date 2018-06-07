@@ -24,6 +24,8 @@ const execSummary = {
 
 function loadSummary() {
     const summaryFragment = document.createDocumentFragment();
+    document.querySelector("#art").innerHTML = ""
+    
     for (key in execSummary) {
 
 
