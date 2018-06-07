@@ -1,5 +1,5 @@
 //first step was creating a large object with smaller objects in it that create a newsfeed.
-const newsfeed = {
+const myNewsfeed = {
     section1: {
         h1: "News About Walter Off-White"
     },
@@ -27,15 +27,12 @@ const newsfeed = {
 
 //make it all into a function that will create the elements, attach the text content, append to the article which then goes into the html
 
-const populateNews = function (myNewsfeed) {
-//this clears the html in that section
-
-    document.querySelector("#art").innerhtml = " ";
-
-   
+const populateNews = function () {
 
 //putting that object in a fragment so that I can then push that to DOM
     const newsFragment = document.createDocumentFragment();
+    //this clears the html in that section
+    document.querySelector("#art").innerhtml = " ";
 //now making a for in loop to go through 
     for (const section in myNewsfeed) {
 //if statement for the h1 section since it is by itself
@@ -64,9 +61,7 @@ const populateNews = function (myNewsfeed) {
         }
     }
 //selecting article to then append the entire news fragment 
-    document.querySelector("article").appendChild(newsFragment);
+    document.querySelector("#art").appendChild(newsFragment);
 }
-//now im calling the function and putting the newsfeed into it
-
 
 //YAY IT WORKS
