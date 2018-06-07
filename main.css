@@ -6,6 +6,7 @@
       background: url("https://crasstalk.com/wp-content/uploads/2011/07/vlcsnap-00243.jpg") no-repeat center fixed;
       background-size: 400%;
       background-position: 50% 20px;
+      text-align: center;
 }
 
     #art {
@@ -26,25 +27,21 @@
     h4 {
         color: red;
         font-size: 1.5em;
-        margin: 30px 80px 10px 30px;
+        /* margin: 30px 80px 10px 30px; */
+        text-align: center;
     }
 
     h1 {
         text-decoration: underline;
         font-size: 1.7em;
-        margin: 30px 80px 10px 30px;
+        /* margin: 30px 80px 10px 30px; */
         text-align: center;
     } 
 
     ul {
         list-style-type: none;
         font-size: 1.2em;
-        margin: 30px 30px 10px 30px;
-    }
-    .mainheading {
-        padding: 0 20px;
-       
-        margin: 80px auto 0px auto;
+        /* margin: 30px 30px 10px 30px; */
     }
 
   }
@@ -57,6 +54,7 @@
       background: url("https://crasstalk.com/wp-content/uploads/2011/07/vlcsnap-00243.jpg") no-repeat fixed;
       background-size: 150%;
       background-position: 50% -25px; 
+      text-align: center;
 }
    
     #art {
@@ -138,11 +136,11 @@
       height: auto;
     }
 
-    /* img:nth-child(1), img:nth-child(2) {
-        margin: 0 auto;
-        width: 400px;
-        height: auto;
-    } */
+    h4{
+        color: red;
+        font-size: 1.5em;
+        text-align: center;
+    }
 
     p {
       display: block;
