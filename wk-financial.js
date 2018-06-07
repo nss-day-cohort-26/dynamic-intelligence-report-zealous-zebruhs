@@ -45,7 +45,6 @@ let financialPageFunc = () => {
 
         article.appendChild(fragment);
     }
-    navbarToggle("financial");
 }
 
 

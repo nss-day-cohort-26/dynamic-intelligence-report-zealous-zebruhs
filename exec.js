@@ -24,8 +24,6 @@ const execSummary = {
 
 function loadSummary() {
     const summaryFragment = document.createDocumentFragment();
-    let article = document.querySelector("article");
-    article.innerHTML = " ";
     for (key in execSummary) {
 
 
@@ -52,7 +50,6 @@ function loadSummary() {
 
     }
     document.querySelector("#art").appendChild(summaryFragment)
-    navbarToggle("summary");
 }
 
 

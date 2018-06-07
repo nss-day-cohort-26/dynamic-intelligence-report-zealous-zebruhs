@@ -29,8 +29,8 @@ const newsfeed = {
 
 const populateNews = function (myNewsfeed) {
 //this clears the html in that section
-    let article = document.querySelector("article");
-    article.innerHTML = " ";
+
+    document.querySelector("#art").innerhtml = " ";
 
    
 
@@ -63,7 +63,6 @@ const populateNews = function (myNewsfeed) {
             newsFragment.appendChild(sectionMain);
         }
     }
-    navbarToggle("news"); //switches the current tab of the navbar
 //selecting article to then append the entire news fragment 
     document.querySelector("article").appendChild(newsFragment);
 }
