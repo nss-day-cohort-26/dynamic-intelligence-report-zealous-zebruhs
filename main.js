@@ -4,7 +4,7 @@ loadRap.addEventListener("click", () => {populateRapSheet(rapSheetObj)});
 
 const loadNews = document.querySelector("#news");
 
-loadNews.addEventListener("click", () => {populateNews(newsfeed)});
+loadNews.addEventListener("click", () => {populateNews(myNewsfeed)});
 
 document.querySelector("#financial").addEventListener("click", financialPageFunc);
 loadSummary();
