@@ -1,0 +1,136 @@
+/* Mobile Styles */
+@media only screen and (max-width: 810px) {
+
+    body {
+      font-family:'Courier New', Courier, monospace;
+      background: url("https://crasstalk.com/wp-content/uploads/2011/07/vlcsnap-00243.jpg") no-repeat center fixed;
+      background-size: 400%;
+      background-position: 50% 20px;
+}
+
+    article {
+        margin-top: 80px;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 335px;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+
+    h4 {
+        color: red;
+        font-size: 1.5em;
+        margin: 30px 80px 10px 30px;
+    }
+
+    h1 {
+        text-decoration: underline;
+        font-size: 1.7em;
+        margin: 30px 80px 10px 30px;
+    } 
+
+    ul {
+        list-style-type: none;
+        font-size: 1.2em;
+        margin: 30px 30px 10px 30px;
+    }
+    .mainheading {
+        padding: 0 20px;
+       
+        margin: 80px auto 0px auto;
+    }
+
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 811px) and (max-width: 1130px) {
+
+    body {
+      font-family:'Courier New', Courier, monospace;
+      background: url("https://crasstalk.com/wp-content/uploads/2011/07/vlcsnap-00243.jpg") no-repeat fixed;
+      background-size: 150%;
+      background-position: 50% -25px; 
+}
+   
+    article {
+        margin: 0 auto;
+        margin-left: 170px;
+        margin-right: 170px;
+        /* text-align: center; */
+    }
+
+    img {
+        width: 70%;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+
+    ul {
+        list-style-type: none;
+        font-size: 1.5em;
+    }
+    
+    h1 {
+        text-decoration: underline;
+        font-size: 2em;
+    }
+
+    .mainheading {
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    h4 {
+        color: red;
+        font-size: 1.4em;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 1131px) {
+
+    body {
+      font-family:'Courier New', Courier, monospace;
+      background: url("https://crasstalk.com/wp-content/uploads/2011/07/vlcsnap-00243.jpg") no-repeat fixed;
+      background-size: 120%;
+      background-position: 50% -40px; 
+}
+
+    img {
+        display: inline;
+        float: left;
+        width: 578px;
+        height: auto;
+        margin-right: 50px;
+    }
+
+    article {
+        margin: 0 350px 0 350px;
+        /* text-align: center; */
+    }
+
+    h4 {
+        color: red;
+        font-size: 1.5em;
+    }
+
+    h1 {
+        text-decoration: underline;
+        font-size: 1.7em;
+    }
+
+    ul {
+        list-style-type: none;
+        font-size: 1.2em;
+    }
+
+
+
+    .p-section {
+        display: inline-block;
+    }
+}
