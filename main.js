@@ -1,6 +1,6 @@
-const loadRap = document.querySelector("#rap");
+// const loadRap = document.querySelector("#rap");
 
-loadRap.addEventListener("click", () => {populateRapSheet(rapSheetObj)});
+// loadRap.addEventListener("click", () => {populateRapSheet(rapSheetObj)});
 
 const loadNews = document.querySelector("#news");
 
