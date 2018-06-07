@@ -32,7 +32,7 @@ const populateNews = function () {
 //putting that object in a fragment so that I can then push that to DOM
     const newsFragment = document.createDocumentFragment();
     //this clears the html in that section
-    document.querySelector("#art").innerhtml = " ";
+    document.querySelector("#art").innerHTML = " ";
 //now making a for in loop to go through 
     for (const section in myNewsfeed) {
 //if statement for the h1 section since it is by itself
