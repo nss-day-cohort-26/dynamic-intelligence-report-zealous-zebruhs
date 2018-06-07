@@ -8,9 +8,12 @@
       background-position: 50% 20px;
 }
 
-    article {
-        margin-top: 80px;
+    #art {
+        max-width: 350px;
         margin: 0 auto;
+        background-color: white;
+        overflow: hidden;
+
     }
 
     img {
@@ -55,11 +58,12 @@
       background-position: 50% -25px; 
 }
    
-    article {
+    #art {
+        max-width: 750px;
         margin: 0 auto;
-        margin-left: 170px;
-        margin-right: 170px;
-        /* text-align: center; */
+        background-color: white;
+        overflow: hidden;
+
     }
 
     img {
@@ -102,35 +106,29 @@
 
     img {
         display: inline;
-        float: left;
-        width: 578px;
+        width: 400px;
         height: auto;
-        margin-right: 50px;
+        margin-right: 0px;
     }
 
-    article {
-        margin: 0 350px 0 350px;
-        /* text-align: center; */
+    img ~ img {
+        display: inline;
+        float: left;
+        width: 100px;
+        height: auto;
+        margin-right: 0px;
     }
 
-    h4 {
-        color: red;
-        font-size: 1.5em;
+    #art {
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: white;
+        overflow: hidden;
     }
 
-    h1 {
-        text-decoration: underline;
-        font-size: 1.7em;
+    p {
+      display: block;
+      float: left;
+      text-align: center;
+
     }
-
-    ul {
-        list-style-type: none;
-        font-size: 1.2em;
-    }
-
-
-
-    .p-section {
-        display: inline-block;
-    }
-}
