@@ -1,30 +1,24 @@
 // my big object with pictures and titles and shit
 const execSummary = {
     manWanted: {
-        sectionTitle: "Wanted: Walter Off-White",
-        src: "https://metrouk2.files.wordpress.com/2013/08/750x100010.jpg?w=748&h=997&crop=1",
-        alt: "Walter Off-White",
+        sectionTitle: "Welcome! Meet Beverly! Aka: BEV",
+        src: "bevonosis.jpg",
+        alt: "Space Bev",
     },
-    aliases: {
-        sectionTitle: "Aliases",
-        pTag: ["Walter Eggshell", " Walter beige"],
-    },
-    country: {
-        sectionTitle: "Country",
-        pTag: ["United States of 'Merica"]
-    },
-    associates: { sectionTitle: "Associates"},
+   
+   
+    associates: { sectionTitle: "Other Identities:"},
     associates1:
         {
-            pTag: "Jesse Fushia-man",
+            pTag: "Beev",
 
-            src: "https://vignette.wikia.nocookie.net/walkingdead/images/5/55/Jesse_Pinkman.jpg/revision/latest?cb=20150313041401",
+            src: "beev.jpg",
             alt: "associates"
         },
     associates2:
         {
-            pTag: "Sal Bad-Man",
-            src: "https://vignette.wikia.nocookie.net/breakingbad/images/1/16/Saul_Goodman.jpg/revision/latest?cb=20120704065846",
+            pTag: "Turkey Bev",
+            src: "turkeyBev.jpg",
             alt: "associates"
         }
 

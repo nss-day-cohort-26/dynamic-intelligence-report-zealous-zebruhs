@@ -1,4 +1,3 @@
-
 const travelObject = {
   Airport: ["Albuquerque", "Mexico Airport Bueno", "Somewhere in the middle of nowhere that also has an airport for some reason"],
   Bus: ["Albuquerque", "Schmalbuquerque"],
