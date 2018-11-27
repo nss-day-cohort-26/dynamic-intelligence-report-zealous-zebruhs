@@ -2,8 +2,9 @@
 const execSummary = {
     manWanted: {
         sectionTitle: "Welcome! Meet Beverly! Aka: BEV",
+       
         src: "bevonosis.jpg",
-        alt: "Space Bev",
+        alt: "Space Bev"
     },
    
    
@@ -37,9 +38,11 @@ function loadSummary() {
         if (execSummary[key].sectionTitle != null) {
 
             let hOne = document.createElement("h1");
+            hOne.setAttribute("id", "bev-title");
             hOne.textContent = execSummary[key].sectionTitle;
             detailFragment.appendChild(hOne);
         }
+       
         // if there is a src thingy it makes an image tag
         if (execSummary[key].src != null) {
             let image = document.createElement("img");
