@@ -7,12 +7,16 @@ const myNewsfeed = {
     },
    
     section2: {
-        h3: "But thanks to her tireless efforts with boxing..",
+        h1: "But thanks to her tireless efforts with boxing..",
         src: "fighter-bev.jpg"
     },
     section3: {
-        h3: "And running..",
+        h1: "And running..",
         src: "running-bev.jpg"
+    },
+    section4: {
+        h1: "She was able to get BUFF",
+        src: "buff-bev2.jpg"
     }
 };
 
@@ -35,6 +39,7 @@ const populateNews = function () {
         if (myNewsfeed[section].src != null) {
             let image = document.createElement("img");
             image.setAttribute("id", "bev-fitness");
+           
             image.src = myNewsfeed[section].src;
             newsFragment.appendChild(image);
 

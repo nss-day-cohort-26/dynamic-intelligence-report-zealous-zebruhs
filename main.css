@@ -111,12 +111,18 @@
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
 }
 #bev-fitness {
-    max-width: 450px;
     padding: 10px;
+    transition: transform .2s; /* Animation */
+    
 }
 #fitness {
     font-style: oblique;
     font-weight: 600;
+    text-align: center;
+   
+}
+#bev-fitness:hover {
+    transform: scale(1.5);
 }
 #bev-pics {
     overflow: hidden;
@@ -129,13 +135,13 @@
     -webkit-transform: rotate(360deg)
 }
 
-    img ~ img {
+    /* img ~ img {
         display: inline;
         float: left;
         width: auto;
         height: 530px;
         margin-right: 0px;
-    }
+    } */
 
     #art {
         display: block;
