@@ -3,7 +3,7 @@ const execSummary = {
     manWanted: {
         sectionTitle: "Welcome! Meet Beverly! Aka: BEV",
        
-        src: "bevonosis.jpg",
+        src: "ehhhhBev.jpg",
         alt: "Space Bev"
     },
    
@@ -21,8 +21,21 @@ const execSummary = {
             pTag: "Turkey Bev",
             src: "turkeyBev.jpg",
             alt: "associates"
-        }
+        },
+        associates3:
+        {
+            pTag: "Bevtonia",
 
+            src: "bevonosis.jpg",
+            alt: "Bev As A Planet"
+        },
+        associates4:
+        {
+            pTag: "Taco Bev",
+
+            src: "taco-bev.jpg",
+            alt: "taco bev"
+        },
 
 }
 
@@ -46,6 +59,7 @@ function loadSummary() {
         // if there is a src thingy it makes an image tag
         if (execSummary[key].src != null) {
             let image = document.createElement("img");
+            image.setAttribute("id", "bev-pics");
             image.src = execSummary[key].src;
             detailFragment.appendChild(image);
 
@@ -53,6 +67,7 @@ function loadSummary() {
         // if there is a pTag thingy it makes a p tag
         if (execSummary[key].pTag != null) {
             let para = document.createElement("p");
+            para.setAttribute("class", "pTag");
             para.textContent = execSummary[key].pTag;
             detailFragment.appendChild(para);
         }

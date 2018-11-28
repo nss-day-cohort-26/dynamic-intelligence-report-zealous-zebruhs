@@ -1,27 +1,18 @@
 //first step was creating a large object with smaller objects in it that create a newsfeed.
 const myNewsfeed = {
     section1: {
-        h1: "News About Walter Off-White"
+        h1: "Bev Used To Be Fat...",
+        src: "bev-nips.jpg",
+       alt: "associates"
     },
+   
     section2: {
-        h3: "Walter Off-White Found in Underwear",
-        p: "Mr. Off-White was found on August 12th aimlessly wandering around Albuquerque in his underwear. He was found in a dazed and confused state in a local grocery store. Sources are telling us his medicine was the cause of this incident. Police returned him safely back with his family.",
-        h4: "Likelyhood of this being Walter is 10/10."
+        h3: "But thanks to her tireless efforts with boxing..",
+        src: "fighter-bev.jpg"
     },
     section3: {
-        h3: "Bald Man and Small Angry Twenty Year-Old Spotted at Los Gatos",
-        p: "Two men were seen eating questionable food at Los Gatos on June 1st while chatting quietly in the corner. Police are suspicious of these two men and are wondering if they are connected to local meth ring.",
-        h4: "Likelyhood of this being Walter is 4/10."
-    },
-    section4: {
-        h3: "Random Car Blown Up in Vacant Parking Lot",
-        p: "Police discovered a red sports car up in flames in a vacant parking lot off of Highway 81.",
-        h4: "Likelyhood of this being Walter is 6/10."
-    },
-    section5: {
-        h3: "Detective Hank Discovers Meth Lab in Laundry Facility",
-        p: "Police recently discovered a large meth lab in a laundry facility. Police have zero leads and are sad this was hidden from them so long.",
-        h4: "Likelyhood of this being Walter is 15/10."
+        h3: "And running..",
+        src: "running-bev.jpg"
     }
 };
 
@@ -41,11 +32,19 @@ const populateNews = function () {
             sectionH1.textContent = myNewsfeed[section].h1;
             newsFragment.appendChild(sectionH1);
         }
+        if (myNewsfeed[section].src != null) {
+            let image = document.createElement("img");
+            image.setAttribute("id", "bev-fitness");
+            image.src = myNewsfeed[section].src;
+            newsFragment.appendChild(image);
+
+        }
 //if statement for the sections that have the h3 in it 
         if (myNewsfeed[section].h3 != undefined) {
             let sectionMain = document.createElement("section");
 //these are basicall just creating the elements and then attaching the text and appending to the sectionMain 
             let sectionH3 = document.createElement("h3");
+            sectionH3.setAttribute("id", "fitness");
             sectionH3.textContent = myNewsfeed[section].h3;
             sectionMain.appendChild(sectionH3);
 
