@@ -124,6 +124,16 @@
 #bev-fitness:hover {
     transform: scale(1.5);
 }
+#bev-other {
+    max-width: 500px;
+    transition: all .2s ease-in-out;
+}
+#bev-other:hover {
+    transform: scale(1.1);
+}
+#other {
+    font-weight: 600;
+}
 #bev-pics {
     overflow: hidden;
     transition-duration: 0.8s;
